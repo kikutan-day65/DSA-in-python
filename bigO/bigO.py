@@ -33,7 +33,27 @@ def nest_print_num(n):
             print(i, j)
 
 nest_print_num(10)
+print()
 
 """
 in this case tmie complexity: O(n*n) = O(n^2)
+"""
+
+
+# drop non-determinants
+def print_items2(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+    
+    for k in range(n):
+        print(k)
+
+print_items2(10)
+print()
+
+"""
+in this case, time complexity: O(n^2) + O(n) = O(n^2+n)
+because of n^2 >>>>>>>>>>> n, we can remove n in the O(n^2+n)
+thus, time complexity: O(n^2)
 """
