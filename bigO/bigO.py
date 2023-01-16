@@ -1,3 +1,13 @@
+"""
+time complexity notations:
+    O(n^2)
+    O(n*log(n))
+    O(log(n))
+    O(1)
+
+O(n^2) >>>> O(n*log(n)) >>>> O(log(n)) >>>> O(1)
+"""
+
 
 # time complexity: O(n)
 def print_items(n):
