@@ -1,11 +1,14 @@
 """
 time complexity notations:
-    O(n^2)
-    O(n*log(n))
-    O(log(n))
-    O(1)
+    - O(n^2) = loop within a loop
+    - O(n*log(n))
+    - O(n) = proportional
+    - O(log(n)) = divide and conquer
+    - O(1) = constant
 
 O(n^2) >>>> O(n*log(n)) >>>> O(log(n)) >>>> O(1)
+
+for more info: https://www.bigocheatsheet.com/
 """
 
 
