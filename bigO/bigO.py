@@ -57,3 +57,8 @@ in this case, time complexity: O(n^2) + O(n) = O(n^2+n)
 because of n^2 >>>>>>>>>>> n, we can remove n in the O(n^2+n)
 thus, time complexity: O(n^2)
 """
+
+
+# time complexity: O(1) = constant time
+def add_items(n):
+    return n + n
