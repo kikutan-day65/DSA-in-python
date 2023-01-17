@@ -29,24 +29,31 @@ class LinkedList:
         return True
 
  
-    def pop(self, value):
-        new_node = Node(value)
-
+    def pop(self):
         if self.length == 0:
-            self.head = new_node
-            self.tail = new_node
+           return None
         
         else:
             temp = self.head
             pre = self.head
 
-            while temp is not None:
+            # iterate untill temp reaches None -> used boolean here
+            while (temp.next):
+                pre = temp
                 temp = temp.next
-                if temp != None:
-                    pre = pre.next
+            
             self.tail = pre
-
+            self.tail.next = None
+            
             self.length -= 1
+            
+            # when there's only one element in the linked list, execute
+            if self.length == 0:
+                self.head = None
+                self.tail = None
+            
+            # returns the node that we just removed
+            return temp
 
  
 
@@ -55,11 +62,11 @@ my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 
 # (2) Items - Returns 2 Node
-print(my_linked_list.pop(2).value)
+print(my_linked_list.pop().value)
 # (1) Item -  Returns 1 Node
-print(my_linked_list.pop(1).value)
+print(my_linked_list.pop().value)
 # (0) Items - Returns None
-print(my_linked_list.pop(0))
+print(my_linked_list.pop())
 
 
 """
