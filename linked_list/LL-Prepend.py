@@ -50,9 +50,10 @@ class LinkedList:
             self.head = new_node
             self.tail = new_node
         else:
-            temp = self.head
+            new_node.next = self.head
             self.head = new_node
-            self.head.next = temp
+            
+            self.length += 1
         return True
 
 
