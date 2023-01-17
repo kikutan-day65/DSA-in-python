@@ -55,12 +55,15 @@ class LinkedList:
         self.length += 1
         return True
 
-    ## WRITE POP_FIRST METHOD HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        else:
+            temp = self.head
+            self.head = self.head.next
+            
+            self.length -= 1
+        return temp
 
 
 
