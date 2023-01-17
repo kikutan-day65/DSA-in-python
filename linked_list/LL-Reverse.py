@@ -102,35 +102,34 @@ class LinkedList:
             return self.pop_first()
         if index == self.length - 1:
             return self.pop()
-        prev = self.get(index - 1)
-        temp = prev.next
-        prev.next = temp.next
+        pre = self.get(index - 1)
+        temp = pre.next
+        pre.next = temp.next
         temp.next = None
         self.length -= 1
         return temp
+
+    ## WRITE REVERSE METHOD HERE ##
+    #                             #
+    #                             #
+    #                             #
+    #                             #
+    ###############################
+  
+
+
 
 my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 my_linked_list.append(3)
 my_linked_list.append(4)
-my_linked_list.append(5)
 
-print('LL before remove():')
+print('LL before reverse():')
 my_linked_list.print_list()
 
-print('\nRemoved node:')
-print(my_linked_list.remove(2).value)
-print('LL after remove() in middle:')
-my_linked_list.print_list()
+my_linked_list.reverse()
 
-print('\nRemoved node:')
-print(my_linked_list.remove(0).value)
-print('LL after remove() of first node:')
-my_linked_list.print_list()
-
-print('\nRemoved node:')
-print(my_linked_list.remove(2).value)
-print('LL after remove() of last node:')
+print('\nLL after reverse():')
 my_linked_list.print_list()
 
 
@@ -138,33 +137,16 @@ my_linked_list.print_list()
 """
     EXPECTED OUTPUT:
     ----------------
-    LL before remove():
+    LL before reverse():
     1
     2
     3
     4
-    5
 
-    Removed node:
+    LL after reverse():
+    4
     3
-    LL after remove() in middle:
+    2
     1
-    2
-    4
-    5
-
-    Removed node:
-    1
-    LL after remove() of first node:
-    2
-    4
-    5
-
-    Removed node:
-    5
-    LL after remove() of last node:
-    2
-    4
-
+    
 """
-
