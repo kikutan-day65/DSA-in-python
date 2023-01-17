@@ -31,7 +31,7 @@ class LinkedList:
         #################################
 
         # in the case that linked list is empty
-        if self.head is None:
+        if self.length == 0:
             self.head = new_node
             self.tail = new_node
         
