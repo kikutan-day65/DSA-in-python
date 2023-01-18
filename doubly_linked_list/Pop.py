@@ -42,7 +42,7 @@ class DoublyLinkedList:
             self.tail = self.tail.prev
             self.tail.next = None
             temp.prev = None
-        self.legth -= 1
+        self.length -= 1
 
         return temp          
   
