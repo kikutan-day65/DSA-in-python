@@ -90,12 +90,28 @@ class DoublyLinkedList:
             return True
         return False
     
-    ## WRITE INSERT METHOD HERE ##
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
+    def insert(self, index, value):
+        new_node = Node(value)
+
+        if index < 0 or index > self.length:
+            return None
+        
+        if index == 0:
+           self.prepend(value)
+
+        if index == self.length:
+            self.append(value)
+
+        before = self.get(index - 1)
+        after = before.next
+
+        new_node.prev = before
+        new_node.next = after
+        before.next = new_node
+        after.prev = new_node
+
+        self.length += 1
+        return True
 
   
 
