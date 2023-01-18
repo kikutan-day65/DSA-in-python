@@ -49,7 +49,6 @@ class DoublyLinkedList:
         if self.length == 0:
             self.head = new_node
             self.tail = new_node
-            return True
         else:
             new_node.next = self.head
             self.head.prev = new_node
