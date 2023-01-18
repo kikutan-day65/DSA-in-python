@@ -44,14 +44,18 @@ class DoublyLinkedList:
         self.length -= 1
         return temp
 
-    ## WRITE PREPEND METHOD HERE ##
-    #                             #
-    #                             #
-    #                             #
-    #                             #
-    ###############################
-
-
+    def prepend(self, value):
+        new_node = Node(value)
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+            return True
+        else:
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
+        self.length += 1
+        return True
 
 
 my_doubly_linked_list = DoublyLinkedList(2)
