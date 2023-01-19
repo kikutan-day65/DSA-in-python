@@ -29,16 +29,17 @@ class Queue:
         return True
 
     def dequeue(self):
-        if self.first is None:
+        if self.length == 0:
             return None
+        temp = self.first
         if self.length == 1:
             self.first = None
             self.last = None
         else:
-            temp = self.first
             self.first = self.first.next
             temp.next = None
-            return temp
+        self.length -= 1
+        return temp
 
  
 
