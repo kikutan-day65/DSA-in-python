@@ -1,18 +1,14 @@
-# class Node:
-    ## WRITE NODE CONSTRUCTOR HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
         
-# class Stack:
-    ## WRITE STACK CONSTRUCTOR HERE ##
-    #                                #
-    #                                #
-    #                                #
-    #                                #
-    ##################################
+class Stack:
+    def __init__(self, value):
+        new_node = Node(value)
+        self.top = new_node
+        self.bottom = new_node
+        self.height = 1
 
 
 
