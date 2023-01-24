@@ -9,6 +9,11 @@ def funcOne():
     funcTwo()
     print('One')
 
-
+"""
+output will be:
+    Three
+    Two
+    One
+"""
 funcOne()
 
